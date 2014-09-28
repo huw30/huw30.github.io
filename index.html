@@ -18,146 +18,114 @@
 		</noscript>
 	</head>
 	<body>
-
 		<!-- Wrapper-->
-			<div id="wrapper">
+		<div id="wrapper">
 				
-				<!-- Nav -->
-					<nav id="nav">
-						<a href="#me" class="icon fa-home active"><span>Home</span></a>
-						<a href="#work" class="icon fa-folder"><span>Work</span></a>
-						<a href="#contact" class="icon fa-envelope"><span>Contact</span></a>
-						<a href="https://github.com/huw30" class="icon fa-github"><span>GitHub</span></a>
-					</nav>
+		<!-- Nav -->
+			<nav id="nav">
+				<a href="#me" class="icon fa-home active"><span>Home</span></a>
+				<a href="#work" class="icon fa-folder"><span>Work</span></a>
+				<a href="#contact" class="icon fa-envelope"><span>Contact</span></a>
+				<a href="https://github.com/huw30" class="icon fa-github"><span>GitHub</span></a>
+			</nav>
 
-				<!-- Main -->
-					<div id="main">
-						
-						<!-- Me -->
-							<article id="me" class="panel">
-								<header>
-									<h1>Huan Wang</h1>
-									<p>Software Engineer</p>
-								</header>
-								<a href="#work" class="jumplink pic">
-									<span class="arrow icon fa-chevron-right"><span>See my work</span></span>
-									<img src="images/me.jpg" alt="" />
-								</a>
-							</article>
+		<!-- Main -->
+			<div id="main">
+				
+				<!-- Me -->
+					<article id="me" class="panel">
+						<header>
+							<h1>Huan Wang</h1>
+							<p>Software Engineer</p>
+						</header>
+						<a href="#work" class="jumplink pic">
+							<span class="arrow icon fa-chevron-right"><span>See my work</span></span>
+							<img src="images/me.jpg" alt="" />
+						</a>
+					</article>
 
-						<!-- Work --> 
-							<article id="work" class="panel">
-								<header>
-									<h2>Work</h2>
-								</header>
-								<p>
-									YinzCam, Inc.
-									Software Developer
-									<ul>
-									<li>● Developed a style guide using Hologram, maintaining as needed</li> 
-									<li>● Built responsive and cross-platform CMS pages using Ember.js framework, strictly followed MVC concept. Developed 6
-									CMS modules, dedicated to write reusable code components. Styled using Sass, and reused components from style guide.
-									Task managed by Grunt-CLI</li>
-									<li>● Experience with node server side framework hapi.js, accept and process requests from CMS, and send proper response
-									back. Server manipulation on MySQL database and Amazon S3 bucket.</li>
-									</ul>
-								</p>
+				<!-- Work --> 
+					<article id="work" class="panel">
+						<header>
+							<h2>Work</h2>
+						</header>
+						<p>
+							YinzCam, Inc.
+							Software Developer
+							<ul>
+							<li>● Developed a style guide using Hologram, maintaining as needed</li> 
+							<li>● Built responsive and cross-platform CMS pages using Ember.js framework, strictly followed MVC concept. Developed 6
+							CMS modules, dedicated to write reusable code components. Styled using Sass, and reused components from style guide.
+							Task managed by Grunt-CLI</li>
+							<li>● Experience with node server side framework hapi.js, accept and process requests from CMS, and send proper response
+							back. Server manipulation on MySQL database and Amazon S3 bucket.</li>
+							</ul>
+						</p>
 
-								<header>
-									<h2>Projects</h2>
-								</header>
-								<p>
-									FriendsDoc Project
-									<ul>
-										<li>● Developed a web application that shows interesting statistical interactions between friends in Facebook</li> 
-										<li>● Based on the data retrieved from Facebook API, JSON data format</li>
-										<li>● Applied AugularJS, HTML5, Bootstrap, Collaborated in Git</li>
-									</ul>
-								</p>
+						<header>
+							<h2>Projects</h2>
+						</header>
+						<p>
+							<a href="http://friendsdoc.herokuapp.com/app/index.html#/">FriendsDoc Project</a>
+							<ul>
+								<li>● Developed a web application that shows interesting statistical interactions between friends in Facebook</li> 
+								<li>● Based on the data retrieved from Facebook API, JSON data format</li>
+								<li>● Applied AugularJS, HTML5, Bootstrap, Collaborated in Git</li>
+							</ul>
+						</p>
 
-								<p>
-									WEat
-									<ul>
-										<li>● Developed a web application, users may search for restaurants collaboratively and share results and opinions with friends</li> 
-										<li>● Retrieved business data from Yelp API, applied Temboo Java library</li>
-										<li>● Applied JSP, Bootstrap, Collaborated in Git</li>
-									</ul>
-								</p>
-							</article>
+						<p>
+							WEat
+							<ul>
+								<li>● Developed a web application, users may search for restaurants collaboratively and share results and opinions with friends</li> 
+								<li>● Retrieved business data from Yelp API, applied Temboo Java library</li>
+								<li>● Applied JSP, Bootstrap, Collaborated in Git</li>
+							</ul>
+						</p>
+					</article>
 
-						<!-- Contact -->
-							<article id="contact" class="panel">
-								<header>
-									<p id="tip-message"></p>
-									<h2>Contact Me</h2>
-								</header>
-								<form id="form" method="get">
-									<div>
-										<div class="row">
-											<div class="6u">
-												<input type="text" name="name" placeholder="Name" />
-											</div>
-											<div class="6u">
-												<input type="text" name="email" placeholder="Email" />
-											</div>
-										</div>
-										<div class="row">
-											<div class="12u">
-												<input type="text" name="subject" placeholder="Subject" />
-											</div>
-										</div>
-										<div class="row">
-											<div class="12u">
-												<textarea name="message" placeholder="Message" rows="8"></textarea>
-											</div>
-										</div>
-										<div class="row">
-											<div class="12u">
-												<input type="submit" value="Send Message" />
-											</div>
-										</div>
-									</div>
-								</form>
-								<script>
-									  $('#form').submit(function(event) {
-									  	var email = $(this).serializeArray();
-										event.preventDefault();
-									  	 $.ajax({
-										  type: 'POST',
-										  url: 'https://mandrillapp.com/api/1.0/messages/send.json',
-										  data: {
-										    'key': 'yzN1YsFPNFR7Ic7-8QcxOw',
-										    'message': {
-										      'from_email': email[1].value,
-										      'to': [
-										          {
-										            'email': 'huan0924@gmail.com',
-										            'name': 'huan',
-										            'type': 'to'
-										          }
-										        ],
-										      'autotext': 'true',
-										      'subject': email[2].value,
-										      'html': email[3].value
-										    }
-										  }
-										 }).done(function(response) {
-										   $('#tip-message').html('Message sent successfully!');
-										   console.log(response);
-										   setTimeout(function()
-										   	{$('#tip-message').html('');}, 5000);
-										 });
-									  });
-								</script>
-							</article>
-					</div>
-		
-				<!-- Footer -->
-					<div id="footer">
-						<ul class="copyright">
-							<li>&copy; Huan Wang</li><li>Design: HTML5 UP</li>
-						</ul>
-					</div>
+			<!-- Contact -->
+				<article id="contact" class="panel">
+					<header>
+						<p id="tip-message"></p>
+						<h2>Contact Me</h2>
+					</header>
+					<form id="form" method="get">
+						<div>
+							<div class="row">
+								<div class="6u">
+									<input type="text" name="name" placeholder="Name" />
+								</div>
+								<div class="6u">
+									<input type="text" name="email" placeholder="Email" />
+								</div>
+							</div>
+							<div class="row">
+								<div class="12u">
+									<input type="text" name="subject" placeholder="Subject" />
+								</div>
+							</div>
+							<div class="row">
+								<div class="12u">
+									<textarea name="message" placeholder="Message" rows="8"></textarea>
+								</div>
+							</div>
+							<div class="row">
+								<div class="12u">
+									<input type="submit" value="Send Message" />
+								</div>
+							</div>
+						</div>
+					</form>
+				</article>
 			</div>
+
+		<!-- Footer -->
+			<div id="footer">
+				<ul class="copyright">
+					<li>&copy; Huan Wang</li><li>Design: HTML5 UP</li>
+				</ul>
+			</div>
+		</div>
 	</body>
 </html>
