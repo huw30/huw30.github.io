@@ -226,8 +226,7 @@
 					if (hash && hash in panels)
 						panels[hash]._activate(true);
 
-					$wrapper.fadeTo(400, 1.0);
-				
+					$wrapper.fadeTo(400, 1.0);	
 			}
 					
 		});
